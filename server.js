@@ -71,7 +71,7 @@ app.post('/v1/chat/completions', async (req, res) => {
           messages: [{ role: 'user', content: 'test' }],
           max_tokens: 1
         }, {
-          headers: { 'Authorization': `Bearer ${NIM_API_KEY}`, 'Content-Type': 'application/json' },
+          headers: { 'Authorization': `Bearer ${NVIDIA_API_KEY}`, 'Content-Type': 'application/json' },
           validateStatus: (status) => status < 500
         }).then(res => {
           if (res.status >= 200 && res.status < 300) {
